@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "exercises[0:13] of if/else , loops, functions"
+git push
