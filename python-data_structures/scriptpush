@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "Data Structures exercises:list,tuples[0:13]"
+git push
