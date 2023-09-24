@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-
 import hidden_4
-for name in dir(hidden_4):
-    if not name.startswith("__"):
-        print(f"{name}")
+
+names = [name for name in dir(hidden_4) if not name.startswith("__")]
+names.sort()
+
+for name in names:
+    print(name)
