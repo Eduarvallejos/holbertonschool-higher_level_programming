@@ -12,6 +12,8 @@ elif d == 0:
     condition = "and is 0"
 else:
     condition = "and is less than 6 and not 0"
+if number < 0 and d != 0:
+    condition = "and is less than 6 and not 0"
 
 print(f"Last digit of {number} is {sign}{d} {condition}")
 
