@@ -2,5 +2,4 @@
 
 def print_reversed_list_integer(my_list=[]):
     for num in reversed(my_list):
-        if isinstanse(num, int):
-            print("{}".format(num))
+        print("{}".format(num))
