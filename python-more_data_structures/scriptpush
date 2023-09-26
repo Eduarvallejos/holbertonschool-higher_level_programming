@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "exercises from More Data Structures: Set, Dictionary[0-12]"
+git push
