@@ -7,3 +7,4 @@ def update_dictionary(a_dictionary, key, value):
     else:
         # Si la clave no existe, agregar una nueva entrada
         a_dictionary[key] = value
+    return a_dictionary
