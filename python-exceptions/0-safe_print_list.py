@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    element_printed = 0
+    elements_printed = 0
+
     try:
-        for i in range(x):
-            if i < len(my_list):
-                print(my_list[i], end='')
-                element_printed += 1
-    except IndexError:
-        pass  # Manejamos la excepcion IndexError si ocurre
-    print()  # Agregamos una nueva linea al final
-    return element_printed
+        iterator = iter(my_list)  # Intenta crear un iterador desde la lista
+        for _ in range(x):
+            item = next(iterator)  # Intenta obtener el siguiente elemento
+            print(item, end='')
+            elements_printed += 1
+    except StopIteration:
+        pass  # Manejamos la excepción StopIteration si la lista se agota
+
+    print()  # Agregamos una nueva línea al final
+    return elements_printed
