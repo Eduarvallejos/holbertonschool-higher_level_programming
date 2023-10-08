@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "exception exercises [0-6]"
+git push
