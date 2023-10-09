@@ -6,6 +6,6 @@ Este modulo representa una clase square
 
 class Square:
     """
-    Esta es una clase defien un cuadrado
+    Este es una clase define un cuadrado
     """
     pass
