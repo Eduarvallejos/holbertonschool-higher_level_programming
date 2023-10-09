@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""
+Este modulo representa una clase square.
+"""
+
+
 class Square:
+    """
+    este es una clase que define un cuadrado.
+    """
     def __init__(self, size=0):
         """
         Inicializa una instancia de Square con un tamaño opcional dado.
