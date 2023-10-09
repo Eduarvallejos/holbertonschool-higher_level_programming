@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Este modulo representa una clase square
+"""
+
+
 class Square:
     def __init__(self, size):
         """
