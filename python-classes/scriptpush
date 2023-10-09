@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "class and object exercises [0-6]"
+git push
