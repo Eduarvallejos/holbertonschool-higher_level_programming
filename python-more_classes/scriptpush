@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "excercise [0-9]"
+git push
