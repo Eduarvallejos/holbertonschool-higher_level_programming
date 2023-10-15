@@ -3,18 +3,50 @@
 Esta modulo representa una clase Rectangle.
 """
 
+
 class Rectangle:
     """
     Este es una clase que define un rectangulo.
     """
-    def __init__(self, width=0,hight=0):
-
-        self.__width = width
+    def __init__(self, width=0, height=0):
+        """
+        Contructor: Inicializa el rectangulo con un ancho y una altura
+        """
         self.__height = height
+        self.__width = width
 
     @property
     def width(self):
+        """
+        Propiedad para obtener el ancho de un rectangulo
+        """
         return self.__width
 
     @width.setter
-    def width
+    def width(self, value):
+        """
+        Propiedad para estableser el ancho de un rectangulo
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def heigth(self):
+        """
+        Propiedad para obtener la altura de un rectangulo
+        """
+        return self.__height
+
+    @heigth.setter
+    def heigth(self, value):
+        """
+        Propiedad para establese la altura de una rectangulo
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
