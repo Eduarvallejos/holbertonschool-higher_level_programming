@@ -25,7 +25,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-        Propiedad para estableser el ancho de un rectangulo
+        Propiedad para establecer el ancho de un rectangulo
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
