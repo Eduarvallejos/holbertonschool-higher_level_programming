@@ -12,8 +12,8 @@ class Rectangle:
         """
         Constructor: Inicializa el rectangulo con un ancho y una altura.
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
