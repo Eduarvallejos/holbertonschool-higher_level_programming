@@ -34,14 +34,14 @@ class Rectangle:
         self.__width = value
 
     @property
-    def heigth(self):
+    def height(self):
         """
         Propiedad para obtener la altura de un rectangulo
         """
         return self.__height
 
-    @heigth.setter
-    def heigth(self, value):
+    @height.setter
+    def height(self, value):
         """
         Propiedad para establese la altura de una rectangulo
         """
