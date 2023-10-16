@@ -66,6 +66,11 @@ class Rectangle:
         return self.__width * 2 + self.__height * 2
 
     def __str__(self):
+        """
+        Metodo para generar una representacion en forma de cadena del
+        rectangulo con caracteres #.
+        Si el ancho o la altura es igual a 0, se devuelve una cadena vacia.
+        """
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
