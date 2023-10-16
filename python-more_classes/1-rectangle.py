@@ -10,7 +10,7 @@ class Rectangle:
     """
     def __init__(self, width=0, height=0):
         """
-        Contructor: Inicializa el rectangulo con un ancho y una altura
+        Contructor: Inicializa el rectangulo con un ancho y una altura.
         """
         self.__height = height
         self.__width = width
@@ -18,14 +18,14 @@ class Rectangle:
     @property
     def width(self):
         """
-        Propiedad para obtener el ancho de un rectangulo
+        Propiedad para obtener el ancho de un rectangulo.
         """
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Propiedad para establecer el ancho de un rectangulo
+        Propiedad para establecer el ancho de un rectangulo.
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -37,14 +37,14 @@ class Rectangle:
     @property
     def height(self):
         """
-        Propiedad para obtener la altura de un rectangulo
+        Propiedad para obtener la altura de un rectangulo.
         """
         return self.__height
 
     @height.setter
     def height(self, value):
         """
-        Propiedad para establese la altura de una rectangulo
+        Propiedad para establese la altura de una rectangulo.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
