@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Esta modulo representa una clase Rectangle.
+Este modulo representa una clase rectangle.
 """
 
 
@@ -10,7 +10,7 @@ class Rectangle:
     """
     def __init__(self, width=0, height=0):
         """
-        Contructor: Inicializa el rectangulo con un ancho y una altura.
+        Constructor: Inicializa el rectangulo con un ancho y una altura.
         """
         self.__height = height
         self.__width = width
@@ -43,7 +43,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """
-        Propiedad para establese la altura de una rectangulo con verificacion.
+        Propiedad para establecer la altura de un rectangulo con verificacion.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
