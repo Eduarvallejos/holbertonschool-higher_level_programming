@@ -131,13 +131,5 @@ class Rectangle:
         """
         Método de clase que crea un rectángulo cuadrado con un ancho
         y una altura iguales.
-
-        Args:
-        - cls: la clase actual (Rectangle).
-        - size (int): Tamaño del lado del cuadrado.
-
-        Returns:
-        - Rectangle: Una instancia de la clase Rectangle que representa
-        un cuadrado de tamaño especificado.
         """
         return cls(size, size)
