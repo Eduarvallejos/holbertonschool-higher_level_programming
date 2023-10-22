@@ -5,6 +5,10 @@ definimos una funcion BaseGeometry
 
 
 class BaseGeometry:
+    """
+    BaseGemotry nos servira como una clase base para operaciones de
+    geometria
+    """
     def area(self):
         """
         Este metodo lanza una excepcion indicando que area() no
