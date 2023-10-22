@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "exercises on inheritance [0-11]"
+git push
