@@ -5,4 +5,7 @@ definimos una funcion BaseGeometry
 
 
 class BaseGeometry:
+    """
+    La clase BaseGeometry esta basia
+    """
     pass
