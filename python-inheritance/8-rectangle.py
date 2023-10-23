@@ -29,3 +29,20 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         elif value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
+
+class Rectangle(BaseGeometry):
+    """
+    La clase rectangle hereda a Basegeometry.
+    """
+    def __init__(self, width, height):
+        """
+        Inicializa los atributos privados de ancho y alto.
+        """
+        self.__width = width
+        self.__height = height
+        """Llama al método integer_validator de la clase base para validar
+        si el ancho y el alto son enteros.
+        """
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
