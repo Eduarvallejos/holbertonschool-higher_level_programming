@@ -1,4 +1,4 @@
--- Este script creara una llamada second_table.
+-- Este script creara una tabla llamada second_table.
 
 CREATE TABLE IF NOT EXISTS second_table(
 	id INT,
