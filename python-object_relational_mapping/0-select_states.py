@@ -19,14 +19,14 @@ def list_func():
         db=argv[3]
     )
 
-    cursor = database.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
+    cur = database.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
 
-    rows = cursor.fetchall()
+    rows = cur.fetchall()
     for row in rows:
         print(row)
 
-    cursor.close()
+    cur.close()
     database.close()
 
 
