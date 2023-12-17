@@ -26,7 +26,7 @@ def list_func():
     for row in rows:
         print(row)
 
-    cursor.close
+    cursor.close()
     database.close()
 
 
