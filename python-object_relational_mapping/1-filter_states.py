@@ -25,7 +25,7 @@ def list_states_with_N():
     cursor.execute("""
                     SELECT * FROM states
                     WHERE name
-                    LIKE 'N%'
+                    LIKE BINARY 'N%'
                     ORDER BY id ASC
                     """)
     rows = cursor.fetchall()
