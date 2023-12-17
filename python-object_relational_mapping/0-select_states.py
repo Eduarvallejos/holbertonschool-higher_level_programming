@@ -7,28 +7,28 @@ import MySQLdb
 from sys import argv
 
 
-def main():
+def list():
     """
-    Esta función hace la consulta de la
-    tabla states en hbtn_0e_0_usa.
+    Esta función hace una consulta a  
+    la db hbtn_0e_0_usa.
     """
 
-    db = MySQLdb.connect(
+    ddatabase = MySQLdb.connect(
         host="localhost",
         user=argv[1],
         password=argv[2],
         port=3306,
         database=argv[3],
     )
-    r = db.cursor()
-    r.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = r.fetchall()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
 
     for row in rows:
         print(row)
 
-    r.close()
-    db.close()
+    cur.close()
+    database.close()
 
 
 if __name__ == "__main__":
@@ -36,4 +36,4 @@ if __name__ == "__main__":
     Esta validación evita que se ejecute
     este archivo.
     """
-    main()
+    list()
