@@ -7,34 +7,39 @@ que comienzan con 'N' de la base de datos hbtn_0e_0_usa.
 import MySQLdb
 from sys import argv
 
+
 def list_states_with_N():
-    
+    """
+    Ejecute la consulta para recuperar states que
+    comiencen con 'N' y ordenados por states.id.
+    """
+
     database = MySQLdb.connect(
         host="localhost",
         user=argv[1],
         password=argv[2],
         port=3306,
         database=argv[3],
-        )
-
-    cursor = database.cursor()
-    """
-    Ejecute la consulta para recuperar states que
-    comiencen con 'N' y ordenados por states.id.
-    """
-    cursor.execute("""SELECT * FROM states
-                    WHERE name
-                    LIKE 'N%'
-                    ORDER BY id ASC
-                    """)
-    rows = cursor.fetchall()
+    )
+    cur = database.cursor()
+    cur.execute("""
+                SELECT * FROM states
+                WHERE name
+                LIKE 'n%'
+                ORDER BY id ASC
+                """)
+    rows = cur.fetchall()
 
     for row in rows:
         print(row)
 
-
-    cursor.close()
+    cur.close()
     database.close()
 
+
 if __name__ == "__main__":
+    """
+    Esta validación evita que se ejecute
+    este archivo.
+    """
     list_states_with_N()
