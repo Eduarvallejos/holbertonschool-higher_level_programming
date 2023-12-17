@@ -13,17 +13,12 @@ def list_states_with_N():
     Ejecute la consulta para recuperar states que
     comiencen con 'N' y ordenados por states.id.
     """
-<<<<<<< HEAD
-
-=======
->>>>>>> f0b02e1a8ba28f8e79e59fc9814db69c5cea436e
     database = MySQLdb.connect(
         host="localhost",
         user=argv[1],
         password=argv[2],
         port=3306,
         database=argv[3],
-<<<<<<< HEAD
     )
     cur = database.cursor()
     cur.execute("""
@@ -33,7 +28,6 @@ def list_states_with_N():
                 ORDER BY id ASC
                 """)
     rows = cur.fetchall()
-=======
         )
 
     cursor = database.cursor()
@@ -43,7 +37,6 @@ def list_states_with_N():
                     ORDER BY id ASC
                     """)
     rows = cursor.fetchall()
->>>>>>> f0b02e1a8ba28f8e79e59fc9814db69c5cea436e
 
     for row in rows:
         print(row)
