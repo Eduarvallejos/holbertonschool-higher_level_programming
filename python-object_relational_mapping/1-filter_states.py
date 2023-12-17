@@ -8,7 +8,10 @@ import MySQLdb
 from sys import argv
 
 def list_states_with_N():
-    
+    """
+    Ejecute la consulta para recuperar states que
+    comiencen con 'N' y ordenados por states.id.
+    """
     database = MySQLdb.connect(
         host="localhost",
         user=argv[1],
@@ -18,10 +21,6 @@ def list_states_with_N():
         )
 
     cursor = database.cursor()
-    """
-    Ejecute la consulta para recuperar states que
-    comiencen con 'N' y ordenados por states.id.
-    """
     cursor.execute("""SELECT * FROM states
                     WHERE name
                     LIKE 'N%'
