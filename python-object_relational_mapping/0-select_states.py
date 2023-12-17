@@ -13,14 +13,14 @@ def list():
     la db hbtn_0e_0_usa.
     """
 
-    ddatabase = MySQLdb.connect(
+    database = MySQLdb.connect(
         host="localhost",
         user=argv[1],
         password=argv[2],
         port=3306,
         database=argv[3],
     )
-    cur = db.cursor()
+    cur = database.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cur.fetchall()
 
