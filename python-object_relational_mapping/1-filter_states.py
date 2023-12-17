@@ -22,7 +22,8 @@ def list_states_with_N():
     )
 
     cursor = database.cursor()
-    cursor.execute("""SELECT * FROM states
+    cursor.execute("""
+                    SELECT * FROM states
                     WHERE name
                     LIKE 'N%'
                     ORDER BY id ASC
