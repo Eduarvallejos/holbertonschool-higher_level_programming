@@ -15,10 +15,10 @@ def main():
 
     db = MySQLdb.connect(
         host="localhost",
-        user=sys.argv[1],
-        password=sys.argv[2],
+        user=argv[1],
+        password=argv[2],
         port=3306,
-        database=sys.argv[3],
+        database=argv[3],
     )
     r = db.cursor()
     r.execute("SELECT * FROM states ORDER BY id ASC")
