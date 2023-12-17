@@ -32,7 +32,7 @@ def list_states_with_N():
     for row in rows:
         print(row)
 
-    cur.close()
+    cursor.close()
     database.close()
 
 
