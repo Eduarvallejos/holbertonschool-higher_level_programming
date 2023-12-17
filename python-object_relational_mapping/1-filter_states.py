@@ -18,7 +18,7 @@ def list_states_with_N():
         user=argv[1],
         password=argv[2],
         port=3306,
-        database=argv[3],
+        database=argv[3]
     )
 
     cursor = database.cursor()
