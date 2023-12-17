@@ -6,29 +6,34 @@ de la database hbtn_0e_0_usa.
 import MySQLdb
 from sys import argv
 
-def list_func():
-    """Enumera los states de la database"""
-    if len(argv) != 4:
-        return
 
-    database = MySQLdb.connect(
-        host='localhost',
+def main():
+    """
+    Esta función hace la consulta de la
+    tabla states en hbtn_0e_0_usa.
+    """
+
+    db = MySQLdb.connect(
+        host="localhost",
+        user=sys.argv[1],
+        password=sys.argv[2],
         port=3306,
-        user=argv[1],
-        password=argv[2],
-        db=argv[3]
+        database=sys.argv[3],
     )
+    r = db.cursor()
+    r.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = r.fetchall()
 
-    cur = database.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC;")
-
-    rows = cur.fetchall()
     for row in rows:
         print(row)
 
-    cur.close()
-    database.close()
+    r.close()
+    db.close()
 
 
 if __name__ == "__main__":
-    list_func()
+    """
+    Esta validación evita que se ejecute
+    este archivo.
+    """
+    main()
