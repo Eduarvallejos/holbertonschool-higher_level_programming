@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Este script enumera todos los 'states' de la database hbtn_0e_0_usa."""
+""" Este script enumera todos los 'states'
+de la database hbtn_0e_0_usa.
+"""
 
 import MySQLdb
 from sys import argv
