@@ -20,15 +20,6 @@ def list_states_with_N():
         port=3306,
         database=argv[3],
     )
-    cur = database.cursor()
-    cur.execute("""
-                SELECT * FROM states
-                WHERE name
-                LIKE 'n%'
-                ORDER BY id ASC
-                """)
-    rows = cur.fetchall()
-        )
 
     cursor = database.cursor()
     cursor.execute("""SELECT * FROM states
