@@ -25,8 +25,8 @@ def list_states():
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).order_by(State.id.asc()).all()
+    
     for state in states:
         print("{}: {}".format(state.id, state.name))
 
