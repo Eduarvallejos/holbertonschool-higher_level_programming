@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
-def list_states():
+if __name__ == "__main__":
     """
     Se conecta al servidor MySQL y enumera todos los objetos de estado.
     """
@@ -32,6 +32,3 @@ def list_states():
         print("{}: {}".format(state.id, state.name))
 
     session.close()
-
-if __name__ == "__main__":
-    list_states()
