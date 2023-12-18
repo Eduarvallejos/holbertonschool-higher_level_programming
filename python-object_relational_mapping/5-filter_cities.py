@@ -30,10 +30,10 @@ def list_cities_by_state():
 
     cursor = database.cursor()
     query = """
-            SELECT cities.id, cities.name
-            FROM cities
-            JOIN states ON cities.state_id = states.id
-            WHERE states.name = %s
+            SELECT cities.name
+            FROM cities AS cities, states AS states
+            WHERE cities.state_id = states.id
+            AND states.name = %s
             ORDER BY cities.id ASC
             """
     cursor.execute(query, (state_name,))
