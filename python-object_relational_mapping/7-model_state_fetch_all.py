@@ -13,7 +13,9 @@ def list_states():
     """
     Se conecta al servidor MySQL y enumera todos los objetos de estado.
     """
-    user, password, db = argv[1:4]
+    user = argv[1]
+    password = argv[2]
+    db = argv[3]
     host = 'localhost'
     port = 3306
 
