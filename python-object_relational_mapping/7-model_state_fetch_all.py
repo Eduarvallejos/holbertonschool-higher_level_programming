@@ -16,12 +16,12 @@ if __name__ == "__main__":
     """
     user = argv[1]
     password = argv[2]
-    db = argv[3]
+    db_name = argv[3]
     host = 'localhost'
     port = 3306
 
     engine = create_engine(
-        f"mysql+mysqldb://{user}:{password}@{host}:{port}/{db}",
+        f"mysql+mysqldb://{user}:{password}@{host}:{port}/{db_name}",
         pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
