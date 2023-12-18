@@ -17,23 +17,22 @@ def search_state_by_name():
     mysql_user = argv[1]
     mysql_pass = argv[2]
     mysql_db = argv[3]
+    host_mysql = 'localhost'
+    port_mysql = 3306
     state_name = argv[4]
 
     database = MySQLdb.connect(
-        host="localhost",
-        port=3306,
+        host=host_mysql,
+        port=port_mysql,
         user=mysql_user,
         password=mysql_pass,
         database=mysql_db
     )
 
     cursor = database.cursor()
-    query = """
-            SELECT * FROM states
-            WHERE BINARY name = %s
-            ORDER BY id ASC
-            """
-    cursor.execute(query, (state_name,))
+    query = "SELECT * FROM states WHERE BINARY\
+            name = '{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(query)
     rows = cursor.fetchall()
 
     for row in rows:
