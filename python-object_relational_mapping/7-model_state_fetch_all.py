@@ -21,7 +21,6 @@ def list_states():
 
     engine = create_engine(
         f"mysql://{user}:{password}@{host}:{port}/{db}")
-    Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
