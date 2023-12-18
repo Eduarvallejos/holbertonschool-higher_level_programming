@@ -31,16 +31,15 @@ def list_cities_by_state():
     cursor = database.cursor()
     query = """
             SELECT cities.name
-            FROM cities AS cities, states AS states
-            WHERE cities.state_id = states.id
-            AND states.name = %s
+            FROM cities
+            INNER JOIN states ON cities.state_id = states.id
+            WHERE states.name = %s
             ORDER BY cities.id ASC
             """
     cursor.execute(query, (state_name,))
     rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    print(", ".join(row[0] for row in rows))
 
     cursor.close()
     database.close()
