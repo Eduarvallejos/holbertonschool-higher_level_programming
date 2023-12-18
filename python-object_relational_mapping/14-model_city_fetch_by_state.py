@@ -3,40 +3,31 @@
 Este script imprime todos los objetos de la ciudad
 de la base de datos 'hbtn_0e_14_usa'
 """
-
-from sys import argv
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+import sys
 from model_state import Base, State
 from model_city import City
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 
-def fetch_cities_by_state():
-    """
-    Se conecta al servidor MySQL e imprime todos los objetos de la ciudad
-    de un estado específico.
-    """
-
-    user = arv[1]
-    password = argv[2]
-    db = argv[3]
-    host = 'localhost'
-    port = 3306
-
-    engine = create_engine(
-            f"mysql+mysqldb://{user}:{password}@{host}:{port}/{db}")
-    Base.metadata.create_all(engine)
+if __name__ == '__main__':
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+                           sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
+    Base.metadata.create_all(engine)
+
+    # create a session
     session = Session()
 
-    cities = session.query(City).order_by(City.id).all()
+    # extract all cities in a state
+    cities = session.query(State, City) \
+                    .filter(State.id == City.state_id)
 
-    for city in cities:
-        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
+    # print all states
+
+    for ci in cities:
+        print("{}: ({}) {}".format(ci.State.name, ci.City.id, ci.City.name))
 
     session.close()
-
-
-if __name__ == "__main__":
-    fetch_cities_by_state()
