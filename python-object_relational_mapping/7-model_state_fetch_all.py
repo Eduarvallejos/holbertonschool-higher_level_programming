@@ -14,9 +14,9 @@ if __name__ == "__main__":
     """
     Se conecta al servidor MySQL y enumera todos los objetos de estado.
     """
-    user = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
+    user = argv[1]
+    password = argv[2]
+    db_name = argv[3]
     host = 'localhost'
     port = 3306
 
