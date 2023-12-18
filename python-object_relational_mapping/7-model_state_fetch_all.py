@@ -14,22 +14,19 @@ if __name__ == "__main__":
     """
     Se conecta al servidor MySQL y enumera todos los objetos de estado.
     """
-    user = argv[1]
-    password = argv[2]
-    db_name = argv[3]
+    user = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
     host = 'localhost'
     port = 3306
 
     engine = create_engine(
-        f"mysql+mysqldb://{user}:{password}@{host}:{port}/{db_name}",
+        f'mysql+mysqldb://{user}:{password}@{host}:{port}/{db_name}',
         pool_pre_ping=True)
-    Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id.asc()).all()
-    
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
 
-    session.close()
+    for state in states:
+        print(f'{state.id}: {state.name}')
