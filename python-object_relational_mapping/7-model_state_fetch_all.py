@@ -20,7 +20,8 @@ def list_states():
     port = 3306
 
     engine = create_engine(
-        f"mysql+mysqldb://{user}:{password}@{host}:{port}/{db}")
+        f"mysql+mysqldb://{user}:{password}@{host}:{port}/{db}",
+        pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
