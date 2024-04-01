@@ -1,25 +1,25 @@
-### JavaScript - Web jQuery
+# JavaScript - Web jQuery
 
 ¡Bienvenido al repositorio de JavaScript - Web jQuery! Aquí encontrarás información y ejemplos sobre cómo utilizar la biblioteca jQuery para mejorar tus desarrollos web.
 
-#### Contenido
+## Contenido
 
-1. **Introducción a jQuery**
-2. **Selección de elementos**
-3. **Manipulación del DOM**
-4. **Manejo de eventos**
-5. **Efectos y animaciones**
-6. **AJAX con jQuery**
+1. [Introducción a jQuery](#Introducción-a-jQuery)
+2. [Selección de elementos](#Selección-de-elementos)
+3. [Manipulación del DOM](#Manipulación-del-DOM)
+4. [Manejo de eventos](#Manejo-de-eventos)
+5. [Efectos y animaciones](#Efectos-y-animaciones)
+6. [AJAX con jQuery](#AJAX-con-jQuery)
 
 ---
 
-#### 1. Introducción a jQuery
+## Introducción a jQuery
 
-jQuery es una biblioteca de JavaScript que simplifica la manipulación del DOM, el manejo de eventos, las animaciones y las peticiones AJAX en el desarrollo web.
+jQuery es una biblioteca de JavaScript que simplifica la manipulación del `DOM`, el manejo de eventos, las animaciones y las peticiones `AJAX` en el desarrollo web.
 
-#### 2. Selección de elementos
+## Selección de elementos
 
-jQuery permite seleccionar elementos del DOM utilizando selectores similares a CSS, lo que facilita la interacción con ellos.
+jQuery permite seleccionar elementos del DOM utilizando selectores similares a `CSS`, lo que facilita la interacción con ellos.
 
 **Ejemplo:**
 ```javascript
@@ -33,9 +33,9 @@ $(".miClase")
 $("p")
 ```
 
-#### 3. Manipulación del DOM
+## Manipulación del DOM
 
-Con jQuery, puedes agregar, eliminar y modificar elementos HTML y sus atributos de manera sencilla.
+Con jQuery, puedes `agregar`, `eliminar` y `modificar` elementos HTML y sus atributos de manera sencilla.
 
 **Ejemplo:**
 ```javascript
@@ -49,9 +49,9 @@ $(".elementoAEliminar").remove();
 $("img").attr("alt", "Nueva descripción de la imagen");
 ```
 
-#### 4. Manejo de eventos
+## Manejo de eventos
 
-jQuery simplifica el manejo de eventos como clics, cambios y desplazamientos, mejorando la interactividad de tu sitio web.
+jQuery simplifica el manejo de eventos como `clics`, `cambios` y `desplazamientos`, mejorando la interactividad de tu sitio web.
 
 **Ejemplo:**
 ```javascript
@@ -66,7 +66,7 @@ $("input").change(function() {
 });
 ```
 
-#### 5. Efectos y animaciones
+## Efectos y animaciones
 
 Con jQuery, puedes crear efectos y animaciones atractivas para mejorar la experiencia del usuario en tu sitio web.
 
@@ -79,9 +79,9 @@ $("#miElemento").fadeOut();
 $("#miOtroElemento").slideDown();
 ```
 
-#### 6. AJAX con jQuery
+## AJAX con jQuery
 
-jQuery facilita las peticiones AJAX, permitiendo cargar datos de forma asíncrona sin tener que recargar la página.
+jQuery facilita las peticiones ``AJAX``, permitiendo cargar datos de forma asíncrona sin tener que recargar la página.
 
 **Ejemplo:**
 ```javascript
