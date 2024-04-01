@@ -19,7 +19,7 @@ jQuery es una biblioteca de JavaScript que simplifica la manipulación del `DOM`
 
 ## Selección de elementos
 
-jQuery permite seleccionar elementos del DOM utilizando selectores similares a `CSS`, lo que facilita la interacción con ellos.
+jQuery permite seleccionar elementos del `DOM` utilizando selectores similares a `CSS`, lo que facilita la interacción con ellos.
 
 **Ejemplo:**
 ```javascript
